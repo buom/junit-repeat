@@ -10,10 +10,10 @@
     <packaging>jar</packaging>
 
     <scm>
-		<connection>scm:git:https://github.com/buom/junit-repeat.git</connection>
-		<developerConnection>scm:git:https://github.com/buom/junit-repeat.git</developerConnection>
-		<url>https://github.com/buom/junit-repeat/tree/${project.scm.tag}</url>
-		<tag>master</tag>
+        <connection>scm:git:https://github.com/buom/junit-repeat.git</connection>
+        <developerConnection>scm:git:https://github.com/buom/junit-repeat.git</developerConnection>
+        <url>https://github.com/buom/junit-repeat/tree/${project.scm.tag}</url>
+        <tag>master</tag>
     </scm>
 
     <properties>
@@ -31,43 +31,43 @@
 
     <build>
         <plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
-				<configuration>
-				    <providerImplementations>
-					    <git>jgit</git>
-					</providerImplementations>
-					<tagNameFormat>@{project.version}</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-jgit</artifactId>
-						<version>1.9.2</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.9.2</version>
-				<configuration>
-					<connectionType>developerConnection</connectionType>
-					<providerImplementations>
-						<git>jgit</git>
-					</providerImplementations>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-jgit</artifactId>
-						<version>1.9.2</version>
-					</dependency>
-				</dependencies>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>1.9.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9.2</version>
+                <configuration>
+                    <connectionType>developerConnection</connectionType>
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>1.9.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.12</version>
@@ -79,11 +79,11 @@
         </plugins>
     </build>
 
-	<distributionManagement>
-		<repository>
-			<id>maven-local-repository</id>
-			<url>file:target/deploy</url>
-		</repository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>maven-local-repository</id>
+            <url>file:target/deploy</url>
+        </repository>
+    </distributionManagement>
 
 </project>
